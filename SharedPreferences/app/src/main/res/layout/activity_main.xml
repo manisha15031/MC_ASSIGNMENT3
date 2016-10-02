@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hp.sharedpreferences.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_name"
+        android:hint="Enter the Name"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:id="@+id/button_save"
+        android:layout_below="@+id/editText_domain"
+        android:layout_alignStart="@+id/editText_domain" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEW"
+        android:id="@+id/button_view"
+        android:layout_below="@+id/editText_domain"
+        android:layout_alignEnd="@+id/editText_domain" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Data Store"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editText_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="#ff4081"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_roll"
+        android:hint="Enter the Roll No."
+        android:layout_below="@+id/editText_name"
+        android:layout_alignStart="@+id/editText_name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_domain"
+        android:hint="Enter the Domain of study"
+        android:layout_below="@+id/editText_roll"
+        android:layout_alignStart="@+id/editText_roll" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Internal"
+        android:id="@+id/button_saveinternal"
+        android:onClick="writeMessage"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/button_save"
+        android:layout_alignEnd="@+id/button_saveexternal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Internal"
+        android:id="@+id/button_viewinternal"
+        android:onClick="readMessage"
+        android:layout_above="@+id/button_saveexternal"
+        android:layout_alignStart="@+id/button_view" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save External"
+        android:onClick="writeExternalStorage"
+        android:id="@+id/button_saveexternal"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/button_saveinternal"
+        android:layout_alignEnd="@+id/button_save" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View External"
+        android:onClick="readExternalStorage"
+        android:id="@+id/button_viewexternal"
+        android:layout_alignTop="@+id/button_saveexternal"
+        android:layout_alignEnd="@+id/button_viewinternal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQLite Fun"
+        android:layout_marginTop="14dp"
+        android:id="@+id/button_sqlite"
+        android:layout_below="@+id/button_saveexternal"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
